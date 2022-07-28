@@ -1,4 +1,4 @@
-/* Copyright © 2007-2016 Evgeny Ratnikov
+/* Copyright © 2007-2020 Evgeny Ratnikov
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -61,6 +61,7 @@ struct Configs
     int get_statusbar_callback;
     enum TermitKbPolicy kb_policy;
     GtkPositionType tab_pos;
+    gboolean tab_close_button;
     struct TermitStyle style;
     GArray* default_tabs;       // TabInfo
 };

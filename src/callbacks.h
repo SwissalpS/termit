@@ -1,4 +1,4 @@
-/* Copyright © 2007-2016 Evgeny Ratnikov
+/* Copyright © 2007-2020 Evgeny Ratnikov
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,6 +34,7 @@ gint termit_on_double_click(GtkWidget *widget, GdkEventButton *event, gpointer f
 void termit_on_save_session();
 void termit_on_load_session();
 void termit_on_tab_title_changed(VteTerminal *vte, gpointer user_data);
+void termit_on_tab_close_clicked(GtkButton*, gpointer);
 void termit_on_toggle_search(GtkToggleButton*, gpointer);
 void termit_on_find_next(GtkButton*, gpointer);
 void termit_on_find_prev(GtkButton*, gpointer);

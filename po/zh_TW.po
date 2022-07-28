@@ -13,19 +13,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/termit_preferences.c:218
+#: src/termit_preferences.c:219
 msgid "Apply to all tabs"
 msgstr ""
 
-#: src/termit_preferences.c:206
+#: src/termit_preferences.c:207
 msgid "Background"
 msgstr ""
 
-#: src/termit_core_api.c:440
+#: src/termit_core_api.c:464
 msgid "Cannot create a new tab"
 msgstr "無法建立新分頁"
 
-#: src/termit_core_api.c:392
+#: src/termit_core_api.c:416
 msgid "Cannot parse command. Creating tab with shell"
 msgstr ""
 
@@ -45,11 +45,11 @@ msgstr "編輯"
 msgid "File"
 msgstr "檔案"
 
-#: src/termit_preferences.c:192
+#: src/termit_preferences.c:193
 msgid "Font"
 msgstr ""
 
-#: src/termit_preferences.c:199
+#: src/termit_preferences.c:200
 msgid "Foreground"
 msgstr ""
 
@@ -59,7 +59,7 @@ msgid "Open"
 msgstr ""
 
 #. Sessions menu
-#: src/termit.c:202 src/callbacks.c:395
+#: src/termit.c:202 src/callbacks.c:418
 msgid "Open session"
 msgstr "開啟作業階段"
 
@@ -67,7 +67,7 @@ msgstr "開啟作業階段"
 msgid "Paste"
 msgstr ""
 
-#: src/termit.c:186 src/termit.c:225 src/termit_preferences.c:166
+#: src/termit.c:186 src/termit.c:225 src/termit_preferences.c:167
 msgid "Preferences"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 msgid "Quit"
 msgstr ""
 
-#: src/termit.c:203 src/callbacks.c:365
+#: src/termit.c:203 src/callbacks.c:388
 msgid "Save session"
 msgstr "儲存作業階段"
 
@@ -98,11 +98,11 @@ msgid ""
 "Close anyway?"
 msgstr "已開啟數個分頁。是否關閉？"
 
-#: src/callbacks.c:274 src/callbacks.c:285
+#: src/callbacks.c:297 src/callbacks.c:308
 msgid "Tab name"
 msgstr "分頁名稱"
 
-#: src/termit_preferences.c:186
+#: src/termit_preferences.c:187
 #, fuzzy
 msgid "Title"
 msgstr "檔案"
@@ -112,7 +112,7 @@ msgstr "檔案"
 msgid "Unable to create directory '%s': %s"
 msgstr "無法建立目錄 '%s': %s"
 
-#: src/termit_preferences.c:212
+#: src/termit_preferences.c:213
 msgid "audible bell"
 msgstr ""
 
