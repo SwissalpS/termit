@@ -3,6 +3,9 @@ Installation Instructions
 
 
     Termit requires CMake (version  2.4 or later). You can obtain CMake sources here http://cmake.org/.
+    
+    On Fedora 36: # dnf install cmake gtk+ vte291 vte291-devel lua lua-devel 
+    (I also did: # dnf install vte vte-devel; but that may have only made the situation worse)
 
 
 Run CMake generator:
