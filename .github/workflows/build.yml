@@ -15,7 +15,7 @@ jobs:
         apt-get update
         apt-get -y install apt-utils
         apt-get -y full-upgrade
-        apt-get install -y gcc cmake gtk+ vte291 vte291-devel lua lua-devel
+        apt-get install -y gcc cmake gtkp vte libvte lua5.4 lua-devel
     - name: Configure
       run: |
         cmake -DCMAKE_BUILD_TYPE=Release .
