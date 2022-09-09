@@ -15,7 +15,7 @@ jobs:
         apt-get update
         apt-get -y install apt-utils
         apt-get -y full-upgrade
-        apt-get install -y gcc cmake lua5.4-dev libgtk-3-dev libvte-2.91
+        apt-get install -y gcc cmake lua5.4-dev libgtk-3-dev libvte-2.91 gettext
         echo "missing gtk+3.0 vte libvte"
     - name: Configure
       run: |
