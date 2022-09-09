@@ -3,19 +3,19 @@ name: Build termit
 on: [push, pull_request]
 
 jobs:
-  fedora_latest_build:
+ubuntu_latest_build:
     runs-on: ubuntu-latest
     container:
-      image: fedora:latest
+      image: ubuntu:latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 1000
     - name: Prepare build environment.
       run: |
-        dnf -y upgrade
-        dnf -y install cmake gcc gtk+ vte291 vte291-devel lua lua-devel
+        apt-get update
+        apt-get -y install apt-utils
+        apt-get -y full-upgrade
+        apt-get install -y gcc cmake gtk+ vte291 vte291-devel lua lua-devel
     - name: Configure
       run: |
         cmake -DCMAKE_BUILD_TYPE=Release .
