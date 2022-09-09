@@ -15,7 +15,8 @@ jobs:
         apt-get update
         apt-get -y install apt-utils
         apt-get -y full-upgrade
-        apt-get install -y gcc cmake lua5.4-dev gtk+3.0
+        apt-get install -y gcc cmake lua5.4-dev
+        echo "missing gtk+3.0 vte libvte"
     - name: Configure
       run: |
         cmake -DCMAKE_BUILD_TYPE=Release .
