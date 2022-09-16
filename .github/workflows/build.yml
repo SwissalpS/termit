@@ -15,7 +15,7 @@ jobs:
     - name: Prepare build environment.
       run: |
         dnf -y upgrade
-        dnf -y install cmake gcc gtk+ vte291 vte291-devel lua lua-devel
+        dnf -y install cmake gcc gtk+ vte291-devel lua-devel
     - name: Configure
       run: |
         cmake -DCMAKE_BUILD_TYPE=Release .
