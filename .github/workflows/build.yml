@@ -31,10 +31,10 @@ jobs:
     - name: dump vte versions
       run: |
         pkg-config --list-all|grep vte
-        pkg-config --modversion vte
         pkg-config --modversion vte-2.91
         pkg-config --modversion vte291
         pkg-config --modversion libvte
+        pkg-config --modversion vte
 
   ubuntu_latest_build:
     runs-on: ubuntu-latest
@@ -64,7 +64,7 @@ jobs:
     - name: dump vte versions
       run: |
         pkg-config --list-all|grep vte
-        pkg-config --modversion vte
         pkg-config --modversion vte-2.91
         pkg-config --modversion vte291
         pkg-config --modversion libvte
+        pkg-config --modversion vte
