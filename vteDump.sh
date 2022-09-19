@@ -1,12 +1,13 @@
 #!/bin/sh
+echo "> pkg-config --list-all|grep vte"
 pkg-config --list-all|grep vte
-echo "----------------------------------"
+echo "> pkg-config --modversion vte-2.91"
 pkg-config --modversion vte-2.91
-echo "----------------------------------"
+echo "> pkg-config --modversion vte291"
 pkg-config --modversion vte291
-echo "----------------------------------"
+echo "> pkg-config --modversion libvte"
 pkg-config --modversion libvte
-echo "----------------------------------"
+echo "> pkg-config --modversion vte"
 pkg-config --modversion vte
 echo "----------------------------------"
 exit 0
