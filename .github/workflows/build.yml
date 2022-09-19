@@ -30,7 +30,8 @@ jobs:
         termit --version
     - name: dump vte versions
       run: |
-        vteDump.sh
+        chmod a+x vteDump.sh
+        ./vteDump.sh
 
   ubuntu_latest_build:
     runs-on: ubuntu-latest
@@ -59,4 +60,5 @@ jobs:
         termit --version
     - name: dump vte versions
       run: |
-        vteDump.sh
+        chmod a+x vteDump.sh
+        ./vteDump.sh
