@@ -9,3 +9,4 @@ pkg-config --modversion libvte
 echo "----------------------------------"
 pkg-config --modversion vte
 echo "----------------------------------"
+exit 0
