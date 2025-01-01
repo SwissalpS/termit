@@ -175,14 +175,14 @@ void termit_create_menubar()
 
     gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), mi_new_tab);
     gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), mi_close_tab);
-    gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), gtk_separator_menu_item_new());
+    //gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), gtk_separator_menu_item_new());
     gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), mi_exit);
     gtk_menu_item_set_submenu(GTK_MENU_ITEM(mi_file), file_menu);
 
     gtk_menu_shell_append(GTK_MENU_SHELL(menu_bar), mi_file);
 
     // Edit menu
-    GtkWidget *mi_set_tab_name = termit_lua_menu_item_from_string(_("Set tab name..."), "setTabTitleDlg");
+    //GtkWidget *mi_set_tab_name = termit_lua_menu_item_from_string(_("Set tab name..."), "setTabTitleDlg");
     GtkWidget *mi_edit_preferences = termit_lua_menu_item_from_string(_("Preferences"), "preferencesDlg");
     GtkWidget *mi_copy = termit_lua_menu_item_from_string(_("Copy"), "copy");
     GtkWidget *mi_paste = termit_lua_menu_item_from_string(_("Paste"), "paste");
@@ -191,8 +191,8 @@ void termit_create_menubar()
     GtkWidget *edit_menu = gtk_menu_new();
     gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_copy);
     gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_paste);
-    gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), gtk_separator_menu_item_new());
-    gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_set_tab_name);
+    //gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), gtk_separator_menu_item_new());
+    //gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_set_tab_name);
     gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_edit_preferences);
     gtk_menu_item_set_submenu(GTK_MENU_ITEM(mi_edit), edit_menu);
 
@@ -221,26 +221,26 @@ void termit_create_popup_menu()
 
     GtkWidget *mi_new_tab = termit_lua_menu_item_from_string(_("New tab"), "openTab");
     GtkWidget *mi_close_tab = termit_lua_menu_item_from_string(_("Close tab"), "closeTab");
-    GtkWidget *mi_set_tab_name = termit_lua_menu_item_from_string(_("Set tab name..."), "setTabTitleDlg");
+    //GtkWidget *mi_set_tab_name = termit_lua_menu_item_from_string(_("Set tab name..."), "setTabTitleDlg");
     GtkWidget *mi_edit_preferences = termit_lua_menu_item_from_string(_("Preferences"), "preferencesDlg");
     GtkWidget *mi_copy = termit_lua_menu_item_from_string(_("Copy"), "copy");
     GtkWidget *mi_paste = termit_lua_menu_item_from_string(_("Paste"), "paste");
-    GtkWidget *mi_exit = termit_lua_menu_item_from_string(_("Quit"), "quit");
+    //GtkWidget *mi_exit = termit_lua_menu_item_from_string(_("Quit"), "quit");
     termit.mi_show_scrollbar = gtk_check_menu_item_new_with_label(_("Scrollbar"));
     gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(termit.mi_show_scrollbar), configs.show_scrollbar);
     termit_set_show_scrollbar_signal(termit.mi_show_scrollbar, NULL);
 
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_new_tab);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_close_tab);
-    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
-    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_set_tab_name);
+    //gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
+    //gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_set_tab_name);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), termit.mi_show_scrollbar);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_edit_preferences);
-    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
+    //gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_copy);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_paste);
-    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
-    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_exit);
+    //gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
+    //gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_exit);
 
     // User popup menus
     TRACE("user_popup_menus->len=%d", configs.user_popup_menus->len);
@@ -502,3 +502,4 @@ int main(int argc, char **argv)
     termit_lua_close();
     return 0;
 }
+
