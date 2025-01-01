@@ -1,4 +1,4 @@
-/* Copyright © 2007-2020 Evgeny Ratnikov
+/* Copyright © 2007-2023 Evgeny Ratnikov
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -63,7 +63,7 @@ void termit_style_copy(struct TermitStyle* dest, const struct TermitStyle* src)
         dest->foreground_color = NULL;
     }
     if (src->colors_size) {
-        dest->colors = g_memdup(src->colors, src->colors_size * sizeof(GdkRGBA));
+        dest->colors = g_memdup2(src->colors, src->colors_size * sizeof(GdkRGBA));
         dest->colors_size = src->colors_size;
     } else {
         dest->colors = NULL;

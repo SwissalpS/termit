@@ -1,4 +1,4 @@
-# Copyright © 2007-2020 Evgeny Ratnikov
+# Copyright © 2007-2023 Evgeny Ratnikov
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-SET(TERMIT_DOCS ../COPYING README lua_api.txt rc.lua.example)
+SET(TERMIT_DOCS ../COPYING README lua_api.md rc.lua.example)
 
 INSTALL(FILES ${TERMIT_DOCS} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/doc/${TERMIT_PACKAGE})
 INSTALL(FILES termit.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/share/man/man1)

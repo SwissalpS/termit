@@ -1,4 +1,4 @@
-# Copyright © 2007-2020 Evgeny Ratnikov
+# Copyright © 2007-2023 Evgeny Ratnikov
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,13 +28,13 @@ ENDIF(NOT VTE_FOUND)
 SET(LUA_VERSION "" CACHE STRING "Lua version")
 IF(LUA_VERSION STREQUAL "")
     IF(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
-       pkg_search_module(LUA REQUIRED lua53)
+       pkg_search_module(LUA REQUIRED lua54)
     ELSE(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
-       pkg_search_module(LUA REQUIRED lua>=5.3 lua5.3)
+       pkg_search_module(LUA REQUIRED lua>=5.4 lua5.4)
     ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
 ELSE(LUA_VERSION STREQUAL "")
   pkg_search_module(LUA REQUIRED
-    lua=${LUA_VERSION} lua5.3=${LUA_VERSION})
+    lua=${LUA_VERSION} lua5.4=${LUA_VERSION})
 ENDIF(LUA_VERSION STREQUAL "")
 IF(NOT LUA_FOUND)
   message(FATAL_ERROR "Lua library was not found.")
@@ -42,7 +42,7 @@ ENDIF(NOT LUA_FOUND)
 
 INCLUDE(Sources.cmake)
 
-SET(TERMIT_CFLAGS "-I${LUA_INCLUDE_DIR}")
+SET(TERMIT_CFLAGS "")
 IF(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
   SET(TERMIT_CFLAGS "${TERMIT_CFLAGS} -I/usr/local/include")
 ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
@@ -65,7 +65,7 @@ SET_SOURCE_FILES_PROPERTIES(${TERMIT_SRCS} PROPERTIES
 ADD_EXECUTABLE(${TARGET} ${TERMIT_SRCS})
 
 IF(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
-    SET(TERMIT_LDFLAGS"-llua5.3")
+    SET(TERMIT_LDFLAGS"-llua5.4")
 ELSE(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
     SET(TERMIT_LDFLAGS "-ldl -lm")
 ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")

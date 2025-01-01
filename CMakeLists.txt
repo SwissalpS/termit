@@ -1,4 +1,4 @@
-# Copyright © 2007-2020 Evgeny Ratnikov
+# Copyright © 2007-2023 Evgeny Ratnikov
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,9 +13,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+cmake_minimum_required(VERSION 3.6.0 FATAL_ERROR)
 PROJECT(TERMIT C)
 
-cmake_minimum_required(VERSION 2.6.1...3.22.2 FATAL_ERROR)
 SET(CMAKE_VERSION "${CMAKE_CACHE_MAJOR_VERSION}.${CMAKE_CACHE_MINOR_VERSION}.${CMAKE_CACHE_RELEASE_VERSION}")
 
 INCLUDE(UsePkgConfig)
@@ -38,7 +38,7 @@ SET(ENABLE_NLS TRUE CACHE BOOL "enable translation")
 SET(XDG_DIR ${XDG_DIR} CACHE STRING "default xdg dir")
 
 SET(TERMIT_PACKAGE "termit")
-SET(TERMIT_PACKAGE_VERSION "3.1.1")
+SET(TERMIT_PACKAGE_VERSION "3.1.2")
 SET(TERMIT_LOCALE_DIR "${CMAKE_INSTALL_PREFIX}/share/locale")
 SET(TERMIT_XDG_DIR "${XDG_DIR}/termit")
 SET(TERMIT_PACKAGE_NAME "termit - terminal emulator")
