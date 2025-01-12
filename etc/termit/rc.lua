@@ -18,3 +18,4 @@ defaults.urgencyOnBell = false
 setOptions(defaults)
 
 setKbPolicy('keysym')
+
