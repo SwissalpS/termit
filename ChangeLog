@@ -1,3 +1,4 @@
+	add gruvbox colormaps (by zzgraph)
 	refactored several deprecated functions
 	rename lua_api.txt to md because it is markdown
 	cmake_minimum_required changed to 3.6.0
@@ -185,7 +186,7 @@ versoin 1.3.2
 	added session.example to installed docs
 version 1.3.1
 	added show_scrollbar option in popup menu and termit.cfg
-	shell_cmd variable splitted into shell (eg bash, zsh, python, etc) 
+	shell_cmd variable split into shell (eg bash, zsh, python, etc)
 		and shell_cmd (eg -c 'su - root', etc)
 	updated documentation
 	bugfix with uninitialized GError
